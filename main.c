@@ -1,5 +1,7 @@
 #include <kipr/botball.h>
 
+int main()
+{
 //Drive from disaster relief zone to utility zone
 //Turn left to electrical line
 //Drive forward to electrical line
@@ -22,3 +24,4 @@
 //Move along the centerline to collect supplies
 //Turn towards disaster relief zone
 //Move supplies to disaster relief zone
+}
