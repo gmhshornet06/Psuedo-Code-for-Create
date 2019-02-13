@@ -1,3 +1,5 @@
+#include <kipr/botball.h>
+
 int main()
 {
 	wait_for_light(3);
