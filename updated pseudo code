@@ -1,0 +1,37 @@
+//wait for light 20 seconds
+//shutdown in 98 seconds
+//turn 180 degrees
+//drive forward 
+//turn right
+//drive forward
+//turn 90 degrees left
+//drive backward
+//open claw
+//raise arm
+//lower arm
+//turn 90 degrees left
+//bump
+//turn left
+//bump
+//drive backwards
+//raise arm
+//open claw
+//close claw
+//raise arm
+//turn 90 degrees
+//drive forward
+//bump
+//turn 90 degrees left
+//drive forward
+//lower arm
+//close claw
+//drive forward
+//turn 90 degrees left
+//raise arm
+//open claw
+//drive forward (fast)
+//raise arm
+//drive forward (fast)
+//lower arm
+//drive forward (fast)
+
