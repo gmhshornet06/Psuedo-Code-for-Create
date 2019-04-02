@@ -1,23 +1,74 @@
 #include <kipr/botball.h>
+void drive_forward(double distance);
+void drive_backk(int distance);
+void drive_back(int distance);
+void turn_right(int degrees);
+void turn_left(int degrees);
 
 int main()
 {
 	wait_for_light(3);
 	shut_down_in(118);
 	create_connect();
-	while(analog(1) < 2600)
-	{
-		create_drive_direct(250,250);
-		msleep(10);
-	}
-	create_drive_direct(250,250);
-	create_stop();
-	set_create_total_angle(0);
-	while(abs(get_create_total_angle()) < 40)
-	{
-		Create_drive_direct(-250,250);
-		msleep(10);
-	}
+	  cmpc(0);
+     while(gmpc(0)<2300)
+    {
+        motor(0,700);
+         msleep(10);
+    }
+    
+ao();
+    msleep(1500);
+    drive_forward(28);
+   turn_left(39);
+drive_forward(120);
+turn_left(39);
+drive_backk(25);
+ set_servo_position(2,448);
+ msleep(1000);
+turn_left(39);
+set_servo_position(2,1800);
+turn_right(39);
+set_servo_position(2,448);
+turn_left(39);
+set_servo_position(2,1800);
+
+	
 	create_stop();
 	create_disconnect();
+}
+void drive_backk(int distance)
+{
+    create_drive_direct(100,100);
+    msleep(distance/25*1000);
+    create_stop();
+}
+void drive_forward(double distance)
+{
+    create_drive_direct(250,250);
+    msleep(distance/25*1000);
+    create_stop();
+}
+    
+void drive_back(int distance)
+{
+   
+      create_drive_direct(-250,-250);
+     msleep(abs(distance/25*1000));
+    
+    create_stop();
+}
+void turn_right(int degrees)
+{
+    create_drive_direct(250,-250);
+    msleep(degrees*20);
+    create_stop();
+}
+    
+void turn_left(int degrees)
+
+{
+    create_drive_direct(-250,250);
+    msleep(degrees*20);
+    create_stop();
 }
